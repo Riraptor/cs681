@@ -1,0 +1,13 @@
+<project basedir="." default="compile" name="homework29-client" >
+  <target name="init">
+	<mkdir dir="bin"/>
+	</target>
+  <target name="compile" depends = "init">
+ 	 	
+    <javac destdir="bin" srcdir="src" includeantruntime="false"/>
+
+    <java classpath="bin" classname="homework30.BankClient"> 
+	</java>
+
+  </target>
+</project>
