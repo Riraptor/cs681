@@ -1,0 +1,45 @@
+homework 4 Cs681
+
+We can make class Command a FunctionalInterface and method execute() an abstract method.
+The sudo code is as follows:
+
+//For Command class:
+
+@FunctionalInterface
+public interface Command{
+	public abstract void execute(float, String, String , String);
+}
+
+//For document code:
+public class Document{
+	float fontSize;
+	String name;
+	String style;
+	String alignment;
+	
+	public Document (Command command){
+
+		this.command = Objects.requireNonNull(areaCalc);
+		
+		}
+		
+	public changeFont(float fontSize) {
+		this.fontSize = fontSize;
+	}
+
+	public changeName(String name) {
+		.......
+	}
+	....
+	....
+}
+
+//For Client code:
+
+Document dox = new Document((float fontSize, String name, String style, String alignment)->
+								{
+								this.changeFont(fontSize);
+								this.changeName(name);
+								this.changeStyle(style);
+								this.changeAlignement(alignment);
+								});
